@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> dress website </title>
+</head>
+
+<body>
+    <h1> welcome to the website </h1>
+    <form action="/get_all_tracks" method="post">
+        <input type="submit" value="get all tracks">
+    </form>
+    <hr>
+    <form action="/search_by_id" method="post">
+        Search for id= <input type="number" min=0 step=1 name="id">
+        <input type="submit" value="search">
+    </form>
+    <hr>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    // $(document).ready(function () {
+
+    //     // GET ALL DRESSES
+    //     $("#get_all_button").click(function () {
+    //         $("#status").html("Wainting for server..")
+    //         $("#dress_list").html("")// clear previous result
+    //         $.get('/dresses', function (reply, text_status) {
+
+    //             // this executes only on success code returned 2xx like 200,201,etc..
+    //             console.log(reply)
+    //             $("#status").html(reply.message)
+    //             let data_returned = reply.db_data
+    //             var table_html = '<table>'
+    //             for (let i = 0; i < data_returned.length; i++) {
+    //                 table_html += '<tr><td>' + data_returned[i].id + '</td> <td>' + data_returned[i].name + '</td>'
+    //                     + '<td>' + data_returned[i].description + '</td> <td>' + data_returned[i].size + '</td>'
+    //                     + '<td>' + data_returned[i].color + '</td><td>' + data_returned[i].style + '</td></tr>'
+    //             }
+    //             table_html += '</table>'
+    //             $("#dress_list").html(table_html)
+    //         })
+
+    //             .fail(function (jqXHR, textStatus, errorThrown) {
+    //                 // this executes only on error with code other than 2xx
+    //                 // display response code
+    //                 $("#status").html(jqXHR.status)
+    //                 // append messade returned to API
+    //                 $("#status").append(jqXHR.responseJSON.message)
+    //             })
+
+    //             // if required .done() and .always() are also available
+    //             .done(function () {
+    //                 // this execute only
+    //             })
+    //     })
+
+    //     // GET 1 DRESS -------------------------------------------------------------------------
+    //     $("#get_id_input").change(function () {
+    //         // clear previous result
+    //         $("#status").html("Wainting for server..")
+    //         $("#dress_list").html("")
+
+    //         // get value selected by user
+    //         let id = $("#get_id_input").val()
+
+    //         //call server with id in the url
+    //         $.get('/dresses/' + id, function (reply, text_status, jqXHR) {
+
+    //             // this executes only on success code returned 2xx like 200,201,etc..
+    //             console.log(reply)
+    //             $("#status").html(reply.message)
+    //             let data_returned = reply.db_data
+    //             var table_html = '<table>'
+    //             for (let i = 0; i <= data_returned.length; i++) {
+    //                 table_html += '<tr><td>' + data_returned[i].id + '</td> <td>' + data_returned[i].name + '</td>'
+    //                     + '<td>' + data_returned[i].description + '</td> <td>' + data_returned[i].size + '</td>'
+    //                     + '<td>' + data_returned[i].color + '</td><td>' + data_returned[i].style + '</td></tr>'
+    //             }
+    //             table_html += '</table>'
+    //             $("#dress_list").html(table_html)
+    //         })
+
+    //             .fail(function (jqXHR, textStatus, errorThrown) {
+    //                 // this executes only on error with code other than 2xx
+    //                 // display response code
+    //                 $("#status").html(jqXHR.status)
+    //                 // append messade returned to API
+    //                 $("#status").append(jqXHR.responseJSON.message)
+    //             })
+
+    //             // if required .done() and .always() are also available
+    //             .done(function () {
+    //                 // this execute only
+    //             })
+    //     })
+    // })
+</script>
+
+</html>

@@ -1,0 +1,15 @@
+GET http://localhost:3001/get_all_tracks HTTP/1.1
+
+
+###
+DELETE http://localhost:3001/delete_track/21 HTTP/1.1
+
+
+### to insert
+POST http://localhost:3001/insert_into_playlist HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+title=title5&track_id=5&track_title=title5 in track table&uri=uri5&master_id=105
+
+
+
